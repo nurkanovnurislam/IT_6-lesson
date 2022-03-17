@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+html,body {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+}
+.icons {
+    list-style: none;
+
+}
+.icons li {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+.icons li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border: 3px solid rgb(140, 141, 194);
+    border-radius: 10%;
+    background-color:rgb(140, 167, 116);
+    transition: all 0,3s easy-in;
+    
+}
+.icons li:hover:before {
+    transform: rotate(360deg);
+    border-radius: 100%;
+} 
+.icons li a span {
+    font-size: 27px;
+    line-height: 10px;
+    color:darkslateblue;
+    transition: all 0.3s easy-out;
+    align-items: center;
+    padding-top: 28px;
+}
+.icons li:hover a span {
+    transform: scale(1.2);
+}
